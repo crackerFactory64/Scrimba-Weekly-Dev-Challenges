@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral&display=swap");
+
+* {
+  margin: 0;
+}
+
+.body {
+  background: hsl(230 35% 7%);
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  position: relative;
+}
+
+.body--light {
+  background-color: white;
+}
+
+.button {
+  aspect-ratio: 1;
+  background-color: #fff;
+  border-radius: 50%;
+  user-select: none;
+  border: none;
+  color: hsl(230 35% 7%);
+  font-family: "Spectral", sans-serif;
+  font-size: 2.3rem;
+  position: relative;
+  text-transform: uppercase;
+  width: 250px;
+}
+
+.button--light {
+  border: 2px solid #005ff7;
+  background-color: #fff;
+  color: #005ff7;
+}
+
+.button::before {
+  aspect-ratio: 1;
+  background-color: #24262e;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: width ease 250ms;
+  width: 0px;
+  z-index: -10;
+}
+
+.button--light:before {
+  background-color: #005ff7;
+}
+
+.button:hover.button::before {
+  width: 375px;
+}
+
+.toggle-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: transparent 2px solid;
+
+  position: fixed;
+  left: 2.5%;
+  top: 5%;
+  width: 50px;
+  height: 25px;
+  display: block;
+  border-radius: 10em;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.toggle-container--light {
+  border: #005ff7 2px solid;
+}
+
+.toggle {
+  width: 50%;
+  border-radius: 50%;
+  background-color: #005ff7;
+  content: "";
+  color: #fff;
+  aspect-ratio: 1;
+  display: grid;
+  margin-right: auto;
+  margin-left: 0;
+  place-items: center;
+}
+
+.toggle--on {
+  margin-right: 0;
+  margin-left: auto;
+  color: hsl(230 35% 7%);
+  background-color: #fff;
+}
