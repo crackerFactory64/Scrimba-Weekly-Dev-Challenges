@@ -23,11 +23,15 @@
   user-select: none;
   border: none;
   color: hsl(230 35% 7%);
+  cursor: pointer;
   font-family: "Spectral", sans-serif;
-  font-size: 2.3rem;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
   position: relative;
+  text-align: center;
   text-transform: uppercase;
-  width: 250px;
+  transition: width ease-in-out 500ms;
+  width: 400px;
 }
 
 .button--light {
@@ -46,8 +50,8 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: width ease 250ms;
-  width: 0px;
+  transition: width ease-in-out 500ms;
+  width: 400px;
   z-index: -10;
 }
 
@@ -55,8 +59,16 @@
   background-color: #005ff7;
 }
 
-.button:hover.button::before {
-  width: 375px;
+.button-container {
+  padding: 2em;
+}
+
+.button-container:hover .button {
+  width: 350px;
+}
+
+.button-container:hover .button::before {
+  width: 475px;
 }
 
 .toggle-container {
