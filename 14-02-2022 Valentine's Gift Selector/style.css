@@ -1,0 +1,118 @@
+:root {
+  --yellow: #fbf3ab;
+  --light-pink: #f0b9dd;
+  --lavender: #c7b9ff;
+  --deep-pink: #f04c86;
+  --raisin: #2b283a;
+  --white: #fff;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  color: var(--raisin);
+  background-color: var(--yellow);
+  padding: 2em;
+  font-family: "Karla", sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+form * {
+  padding: 0.5em;
+  font-size: 1.3rem;
+  font-family: inherit;
+}
+
+form label,
+form button {
+  font-weight: 700;
+}
+
+form *:not(label):not(div),
+.result {
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border-radius: 5px;
+  border: none;
+}
+
+select {
+  background: var(--white);
+  color: var(--raisin);
+}
+
+.result {
+  background: var(--light-pink);
+  color: var(--raisin);
+  min-width: 270px;
+  max-width: 5ch;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 1em;
+  font-size: 1.5rem;
+}
+
+.result span {
+  color: var(--deep-pink);
+  font-weight: 700;
+}
+
+.balloon-checkbox {
+  position: relative;
+  cursor: pointer;
+}
+
+.balloon-checkbox::before {
+  position: absolute;
+  width: 250%;
+  aspect-ratio: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  display: grid;
+  place-items: center;
+  content: "";
+  border: 1px solid var(--deep-pink);
+}
+
+.balloon-checkbox:checked::before {
+  content: "🎈";
+}
+
+button {
+  color: var(--white);
+  background: var(--deep-pink);
+}
+
+button:hover,
+button:focus {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.error {
+  visibility: hidden;
+  color: red;
+  box-shadow: none;
+  border: 1px solid red;
+  background-color: #fff;
+  padding: 1em;
+  width: 75%;
+  margin: 1em auto;
+}
