@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="center">
+    <h1>Reusable cup savings!</h1>
+    <p>Coffees drank in the past week:</p>
+    <form>
+      <label for="monday">
+        Monday:<input type="number" name="monday" id="monday" value="0"
+      /></label>
+      <label for="tuesday"
+        >Tuesday:<input type="number" name="tuesday" id="tuesday" value="0"
+      /></label>
+      <label for="wednesday"
+        >Wednesday:<input
+          type="number"
+          name="wednesday"
+          id="wednesday"
+          value="0"
+      /></label>
+      <label for="thursday"
+        >Thursday:<input type="number" name="thursday" id="thursday" value="0"
+      /></label>
+      <label for="friday"
+        >Friday: <input type="number" name="friday" id="friday" value="0"
+      /></label>
+      <label for="saturday"
+        >Saturday:<input type="number" name="saturday" id="saturday" value="0"
+      /></label>
+      <label for="sunday"
+        >Sunday:<input type="number" name="sunday" id="sunday" value="0"
+      /></label>
+    </form>
+    <div class="container center">
+      <ul class="daily-savings" id="daily-savings"></ul>
+      <p class="total-p" id="total-p">☕️</p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
