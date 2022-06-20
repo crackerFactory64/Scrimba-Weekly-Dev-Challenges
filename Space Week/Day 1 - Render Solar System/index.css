@@ -1,0 +1,54 @@
+:root {
+  --pink: #fbe6f4ff;
+  --yellow: #fffad1ff;
+  --green: #e1f0e5ff;
+  --blue: #b5caf9ff;
+  --orange: #f5e6db;
+  --raisin: #2b283aff;
+  --grey: #d4d4d4;
+}
+
+body {
+  background-color: var(--raisin);
+  color: white;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 1100px;
+  width: calc(100vw - 2em);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main__planet {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  margin: 1em;
+  padding: 1em;
+  place-items: center;
+  position: relative;
+}
+
+.main__label {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  bottom: -3em;
+  color: #fff;
+  display: none;
+  font-family: "Helvetica", sans-serif;
+  letter-spacing: 1px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+}
+
+.main__planet:hover > .main__label {
+  display: block;
+}
