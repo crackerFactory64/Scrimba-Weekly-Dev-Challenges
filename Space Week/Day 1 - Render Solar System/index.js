@@ -46,7 +46,7 @@ function renderSolarSystem() {
   planets.forEach((planet) => {
     const planetEl = document.createElement("figure");
     planetEl.classList.add("main__planet");
-    planetEl.style.background = `conic-gradient(rgba(0,0,0,0.6) 0deg 180deg, ${planet.color} 180deg)`;
+    planetEl.style.background = `conic-gradient(rgba(0,0,0,0.6) 0deg 180deg, var(--${planet.color}) 180deg)`;
     planetEl.style.width = planet.diameter;
     const planetLabel = document.createElement("div");
     planetLabel.innerText = `${planet.name}`;
