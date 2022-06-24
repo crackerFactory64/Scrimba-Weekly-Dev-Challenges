@@ -1,0 +1,53 @@
+:root {
+  --black: black;
+  --pink: #fbe6f4ff;
+  --yellow: #fffad1ff;
+  --green: #e1f0e5ff;
+  --blue: #b5caf9ff;
+  --orange: #f5e6db;
+  --raisin: #2b283aff;
+  --grey: #d4d4d4;
+  --white: #fff;
+  --red: #ff0000;
+}
+
+body {
+  background-color: var(--raisin);
+  color: white;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main__planet {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  margin: 1em;
+  padding: 1em;
+  place-items: center;
+  position: relative;
+}
+
+.main__planet:hover > .main__label {
+  display: block;
+}
+
+.main__label {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  bottom: -10em;
+  color: #fff;
+  display: none;
+  font-family: "Helvetica", sans-serif;
+  letter-spacing: 1px;
+  min-width: 150px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+}
